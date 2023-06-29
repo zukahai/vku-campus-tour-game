@@ -44,8 +44,8 @@ function portada() {
         c.shadowBlur=2
         c.lineWidth=4
         c.fillStyle = '#f75f5f'
-        c.strokeText("ON TIME",canvas.width/2, canvas.height/2 + 10)
-        c.fillText("ON TIME",canvas.width/2, canvas.height/2 + 10)  
+        c.strokeText("VKU",canvas.width/2, canvas.height/2 + 10)
+        c.fillText("VKU",canvas.width/2, canvas.height/2 + 10)  
         c.fillStyle = '#fff'      
         c.font="24px NVN-PixelFJVerdana8pt"
         c.strokeText("press enter to start",canvas.width/2, canvas.height/2 + 48)

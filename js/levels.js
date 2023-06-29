@@ -3614,7 +3614,7 @@ let levels = {
                     loop: true,
                     autoplay: true,
                     scale: 1,
-                    identificador: 'muerte',
+                    identificador: 'nivel',
                     vida: 1,
                 }),
             ]
