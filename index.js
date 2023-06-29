@@ -61,6 +61,7 @@ const cuadro = new Image();cuadro.src = "assets/cuadro.png"
 const tren = new Image();tren.src = "assets/tren.png"
 const edificio = new Image();edificio.src = "assets/edificio24.png"
 const mostrador = new Image();mostrador.src = "assets/mostrador.png"
+const vku = new Image();vku.src = "assets/vku.png"
 const victor = new Image();victor.src = "assets/ganar.png"
 const perder = new Image();perder.src = "assets/perder.png"
 
@@ -151,7 +152,7 @@ let player = new Player({
     }
 })
 
-let level = 0
+let level = 4
 
 const keys = {
     ArrowUp: { 

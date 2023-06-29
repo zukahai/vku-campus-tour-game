@@ -10516,6 +10516,395 @@ let levels = {
                     vida: 1,
                 }),
                 // ================ Puerta =======================
+                // ================ Puerta =======================
+                new Sprite({
+                    position: {
+                        x: 6100,
+                        y: 300
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 100, 
+                        height: 200,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hit4',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/puerta.png',
+                    frameRate: 1,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'nivel',
+                    vida: 1,
+                }),
+            ]
+            efectoObjetos = []           
+        }
+    },
+    4: {
+        init: () => {
+            
+            // audioNivel.volume = .15
+            // audioNivel.play()
+            
+            camera = {
+                position:{
+                    x: 0,
+                    y: 0
+                }
+            }
+            parsedCollisions = collisionsLevel4.parse2D()
+            collisionBlocks = parsedCollisions.createObjectsFrom2D()
+            player.collisionBlocks = collisionBlocks
+            player.position.x = 20
+            player.position.y = 200
+            player.lastDirection = 'right'
+
+            transicion = [
+                new Sprite({
+                    position: {
+                        x: 0,
+                        y: 0
+                    },
+                    velocity: {
+                        x: 0,
+                        y: 0
+                    },
+                    imageSrc: './img/backgrounds/transicion.png',
+                    scale: 1,
+                    identificador: 'transicion',
+                }),
+            ]
+            background0 = new Sprite({
+                position:{
+                    x: 0,
+                    y: 0
+                },
+                velocity: {
+                    x: 0,
+                    y: 0
+                },
+                imageSrc: './img/backgrounds/background0.png'
+            })
+            background01 = new Sprite({
+                position:{
+                    x: -20,
+                    y: 0
+                },
+                velocity: {
+                    x: 0,
+                    y: 0
+                },
+                imageSrc: './img/backgrounds/background01.png'
+            })
+            background02 = new Sprite({
+                position:{
+                    x: -60,
+                    y: 0
+                },
+                velocity: {
+                    x: 0,
+                    y: 0
+                },
+                imageSrc: './img/backgrounds/background02.png'
+            })
+            background03 = new Sprite({
+                position:{
+                    x: -90,
+                    y: 0
+                },
+                velocity: {
+                    x: 0,
+                    y: 0
+                },
+                imageSrc: './img/backgrounds/background03.png'
+            })
+            background = new Sprite({
+                position:{
+                    x: 0,
+                    y: 0
+                },
+                velocity: {
+                    x: 0,
+                    y: 0
+                },
+                imageSrc: './img/backgrounds/background04.png'
+            })
+
+            proyectiles = []
+            efectoProyectiles = []
+
+            enemigos = [
+               
+            ]
+            efectoEnemigos = []
+            proyectilesEnemigos = []
+            efectoProyectilesEnemigos = []
+            crearMurcielagos()
+            dispararEnemigos()
+
+            objetos = [
+                // ================ Municion =======================
+                new Sprite({
+                    position: {
+                        x: 424,
+                        y: 340
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 36, 
+                        height: 32,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hitN',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/naranja2.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'municion',
+                    identificador2: 30,
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 2000,
+                        y: 200
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 36, 
+                        height: 32,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hitN',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/naranja2.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'municion',
+                    identificador2: 30,
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 4124,
+                        y: 200
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 36, 
+                        height: 32,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hitN',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/naranja2.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'municion',
+                    identificador2: 30,
+                    vida: 1,
+                }),
+                // ================ Reloj =======================
+                new Sprite({
+                    position: {
+                        x: 744,
+                        y: 200
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 50, 
+                        height: 32,
+                        disX: 18,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -16,
+                        escala: 1,
+                        sourc: 'hitR',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/reloj.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'reloj',
+                    identificador2: 5,
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 1894,
+                        y: 400
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 50, 
+                        height: 32,
+                        disX: 18,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -16,
+                        escala: 1,
+                        sourc: 'hitR',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/reloj.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'reloj',
+                    identificador2: 5,
+                    vida: 1,
+                }),  
+                new Sprite({
+                    position: {
+                        x: 3744,
+                        y: 200
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 50, 
+                        height: 32,
+                        disX: 18,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -16,
+                        escala: 1,
+                        sourc: 'hitR',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/reloj.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'reloj',
+                    identificador2: 5,
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 5744,
+                        y: 200
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 50, 
+                        height: 32,
+                        disX: 18,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -16,
+                        escala: 1,
+                        sourc: 'hitR',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/reloj.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'reloj',
+                    identificador2: 5,
+                    vida: 1,
+                }),              
+                // ================ Corazon =======================
+                new Sprite({
+                    position: {
+                        x: 3250,
+                        y: 200
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 34, 
+                        height: 34,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hit4',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/corazon.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'corazon',
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 5100,
+                        y: 200
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 34, 
+                        height: 34,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hit4',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/corazon.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'corazon',
+                    vida: 1,
+                }),
+                // ================ Puerta =======================
                 new Sprite({
                     position: {
                         x: 6100,

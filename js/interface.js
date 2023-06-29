@@ -12,13 +12,13 @@ function panel() {
         c.shadowBlur=2
         c.lineWidth=4
         c.fillStyle="#fff"
-        c.font="15px Rose" 
+        c.font="15px NVN-PixelFJVerdana8pt" 
         c.strokeText("LEVEL: " + level, 14, 28)
         c.fillText("LEVEL: " + level, 14, 28)
         c.strokeText("SCORE: " + score, 110, 28)
         c.fillText("SCORE: " + score, 110, 28)
         c.fillStyle="#16db7f"
-        c.font="14px Rose"
+        c.font="12px NVN-PixelFJVerdana8pt"
         if(timer2 < 10) c.fillStyle="#f62020"
         c.strokeText("TIME: " + timer2, 912, 93)
         c.fillText("TIME: " + timer2, 912, 93)         
@@ -39,7 +39,7 @@ function portada() {
         c.fillStyle = 'rgba(255, 255, 255, .1)'
         c.fillRect(0, 0, canvas.width, canvas.height)
         c.textAlign="center" 
-        c.font="130px Gl"
+        c.font="130px NVN-PixelFJVerdana8pt"
         c.shadowColor="black"
         c.shadowBlur=2
         c.lineWidth=4
@@ -47,7 +47,7 @@ function portada() {
         c.strokeText("ON TIME",canvas.width/2, canvas.height/2 + 10)
         c.fillText("ON TIME",canvas.width/2, canvas.height/2 + 10)  
         c.fillStyle = '#fff'      
-        c.font="24px Rose"
+        c.font="24px NVN-PixelFJVerdana8pt"
         c.strokeText("press enter to start",canvas.width/2, canvas.height/2 + 48)
         c.fillText("press enter to start",canvas.width/2, canvas.height/2 + 48) 
         c.restore()       
@@ -61,7 +61,7 @@ function transicionF() {
             c.fillStyle = 'rgba(255, 255, 255, 1)'
             c.fillRect(transicion[i].position.x, 0, canvas.width, canvas.height)
             c.fillStyle="#f75f5f"
-            c.font="126px Gl" 
+            c.font="126px NVN-PixelFJVerdana8pt" 
             c.textAlign="center"
             c.shadowColor="black"
             c.shadowBlur= 2
@@ -69,46 +69,53 @@ function transicionF() {
             if(ganar === false && lives >= 1) {
                 c.strokeText("LEVEL ", transicion[i].position.x +500, 240)
                 c.fillText("LEVEL ", transicion[i].position.x +500, 240)
-                c.font="126px Gl" 
+                c.font="126px NVN-PixelFJVerdana8pt" 
                 c.strokeText(level, transicion[i].position.x +660, 240)
                 c.fillText(level, transicion[i].position.x +660, 240)
                 if(level === 1) {
-                    c.font="28px Rose"
+                    c.font="28px NVN-PixelFJVerdana8pt"
                     c.fillStyle="#fff"
                     c.strokeText("Train Station", transicion[i].position.x +520, 290)
                     c.fillText("Train Station", transicion[i].position.x +520, 290)
                     c.drawImage(tren, transicion[i].position.x +280, 310, 473, 185)
                 }
                 if(level === 2) {
-                    c.font="28px Rose"
+                    c.font="28px NVN-PixelFJVerdana8pt"
                     c.fillStyle="#fff"
                     c.strokeText("City", transicion[i].position.x +520, 290)
                     c.fillText("City", transicion[i].position.x +520, 290)
                     c.drawImage(edificio, transicion[i].position.x +430, 310, 181, 250)
                 }
                 if(level === 3) {
-                    c.font="28px Rose"
+                    c.font="28px NVN-PixelFJVerdana8pt"
                     c.fillStyle="#fff"
                     c.strokeText("Restaurant", transicion[i].position.x +520, 290)
                     c.fillText("Restaurant", transicion[i].position.x +520, 290)
                     c.drawImage(mostrador, transicion[i].position.x +280, 310, 500, 181)
                 }
+                if(level === 4) {
+                    c.font="28px NVN-PixelFJVerdana8pt"
+                    c.fillStyle="#fff"
+                    c.strokeText("VKU", transicion[i].position.x +520, 290)
+                    c.fillText("VKU", transicion[i].position.x +520, 290)
+                    c.drawImage(vku, transicion[i].position.x +385, 310, 300, 181)
+                }
             }
             if(ganar === true && lives >= 1) {
-                c.font="90px Gl"
+                c.font="70px NVN-PixelFJVerdana8pt"
                 c.strokeText("CONGRATULATIONS", transicion[i].position.x +500, 230)
                 c.fillText("CONGRATULATIONS", transicion[i].position.x +500, 230)
-                c.font="21px Rose"
+                c.font="21px NVN-PixelFJVerdana8pt"
                 c.fillStyle="#fff"
                 c.strokeText("You arrived at work on time", transicion[i].position.x +500, 270)
                 c.fillText("You arrived at work on time", transicion[i].position.x +500, 270)
                 c.drawImage(victor, transicion[i].position.x +390, 300, 200, 200)
             }
             if(muerte = true && lives <= 0) {
-                c.font="120px Gl"
+                c.font="80px NVN-PixelFJVerdana8pt"
                 c.strokeText("GAME OVER", transicion[i].position.x +500, 240);
                 c.fillText("GAME OVER", transicion[i].position.x +500, 240)
-                c.font="21px Rose"
+                c.font="21px NVN-PixelFJVerdana8pt"
                 c.fillStyle="#fff"
                 c.strokeText("press enter to start", transicion[i].position.x +500, 280)
                 c.fillText("press enter to start", transicion[i].position.x +500, 280)
