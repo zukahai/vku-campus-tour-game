@@ -724,6 +724,7 @@ class Player extends Sprite {
                     obj[i].vida = 0
                 }
                 if(obj[i].identificador === 'nivel') {
+                    console.log("Qua man roi mmm");
 
                     player.velocity.x = 0
 
