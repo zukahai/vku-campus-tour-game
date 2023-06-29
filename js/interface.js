@@ -61,7 +61,7 @@ function transicionF() {
             c.fillStyle = 'rgba(255, 255, 255, 1)'
             c.fillRect(transicion[i].position.x, 0, canvas.width, canvas.height)
             c.fillStyle="#f75f5f"
-            c.font="126px NVN-PixelFJVerdana8pt" 
+            c.font="100px NVN-PixelFJVerdana8pt" 
             c.textAlign="center"
             c.shadowColor="black"
             c.shadowBlur= 2
@@ -69,9 +69,9 @@ function transicionF() {
             if(ganar === false && lives >= 1) {
                 c.strokeText("LEVEL ", transicion[i].position.x +500, 240)
                 c.fillText("LEVEL ", transicion[i].position.x +500, 240)
-                c.font="126px NVN-PixelFJVerdana8pt" 
-                c.strokeText(level, transicion[i].position.x +660, 240)
-                c.fillText(level, transicion[i].position.x +660, 240)
+                c.font="100px NVN-PixelFJVerdana8pt" 
+                c.strokeText(level, transicion[i].position.x +700, 240)
+                c.fillText(level, transicion[i].position.x +700, 240)
                 if(level === 1) {
                     c.font="28px NVN-PixelFJVerdana8pt"
                     c.fillStyle="#fff"
