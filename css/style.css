@@ -16,3 +16,18 @@ body      {background-color: #101010;display: flex;justify-content: center;margi
     100%      {transform: translate(-50%,-50%) rotate(360deg);}
 
 }
+
+.container {
+    height: 100vh;
+  }
+  
+.center {
+margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+
+ml, body {margin: 0; height: 100%; overflow: hidden}
