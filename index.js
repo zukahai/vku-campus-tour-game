@@ -156,7 +156,7 @@ let player = new Player({
     }
 })
 
-let level = 1
+let level = 4
 
 const keys = {
     ArrowUp: { 

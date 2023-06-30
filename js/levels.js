@@ -12587,6 +12587,34 @@ let levels = {
                     identificador2: 30,
                     vida: 1,
                 }),
+                // ================ Puerta =======================
+                new Sprite({
+                    position: {
+                        x: 6100,
+                        y: 360
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 100, 
+                        height: 200,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hit4',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/puerta.png',
+                    frameRate: 1,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'ganar',
+                    vida: 1,
+                }),
                 
             ]
             efectoObjetos = []           

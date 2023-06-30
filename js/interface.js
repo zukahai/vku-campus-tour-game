@@ -111,7 +111,8 @@ function transicionF() {
                 c.fillStyle="#fff"
                 c.strokeText("You arrived at work on time", transicion[i].position.x +canvas.width / 2, 270)
                 c.fillText("You arrived at work on time", transicion[i].position.x +canvas.width / 2, 270)
-                c.drawImage(victor, transicion[i].position.x +390, 300, 200, 200)
+                let width_image = 200;
+                c.drawImage(victor, transicion[i].position.x + canvas.width / 2 - width_image / 2, 300, 200, 200)
             }
             if(muerte = true && lives <= 0) {
                 c.font="80px NVN-PixelFJVerdana8pt"

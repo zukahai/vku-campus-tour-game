@@ -322,7 +322,7 @@ class Player extends Sprite {
                     obj[i].vida = 0
                     obj[i].velocity.x = 0
                     
-                    lives = lives - 1
+                    lives = lives - 5
                     
                     hit = true
                    
