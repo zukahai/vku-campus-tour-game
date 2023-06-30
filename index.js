@@ -42,6 +42,8 @@ let score = 0
 let timer = 60
 let timer2
 let timerId
+let fps = 0
+let lastTime = 0;
 
 let enemigos = []
 let efectoEnemigos = []
@@ -156,7 +158,7 @@ let player = new Player({
     }
 })
 
-let level = 4
+let level = 0
 
 const keys = {
     ArrowUp: { 
@@ -182,7 +184,12 @@ let camera = {
 
 
 function animate() {
-    window.requestAnimationFrame(animate)
+    
+    //Tính fps
+    // fps = Math.round(1000 / (Date.now() - lastTime))
+    // lastTime = Date.now()
+    // console.log(fps);
+
     
     c.save()
 
@@ -243,6 +250,8 @@ function animate() {
     portada() 
     
     transicionF()
+
+    window.requestAnimationFrame(animate)
 
 }
 levels[level].init()

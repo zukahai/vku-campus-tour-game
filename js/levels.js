@@ -12503,6 +12503,7 @@ let levels = {
             dispararEnemigos()
 
             objetos = [
+                // ================ Reloj =======================
                 new Sprite({
                     position: {
                         x: 2300,
@@ -12561,8 +12562,65 @@ let levels = {
                 }),
                 new Sprite({
                     position: {
+                        x: 400,
+                        y: 190
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 50, 
+                        height: 32,
+                        disX: 18,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -16,
+                        escala: 1,
+                        sourc: 'hitR',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/reloj.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'reloj',
+                    identificador2: 5,
+                    vida: 1,
+                }),
+                // ================ Naranja =======================
+                new Sprite({
+                    position: {
                         x: 2200,
                         y: 290
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 36, 
+                        height: 32,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hitN',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/naranja2.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'municion',
+                    identificador2: 30,
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 140,
+                        y: 415
                     },
                     hitboxO: {
                         x: 0, 
