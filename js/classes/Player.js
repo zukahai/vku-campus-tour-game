@@ -19,32 +19,43 @@ class Player extends Sprite {
         this.camerabox = {
             position: {
                 x: this.position.x - 180,
-                y: this.position.y +8
+                y: this.position.y + 8
             },
             width: 400,
             height: 10
         }
+        // console.log(this.camerabox.position.x);
     }
     shouldPanCameraToTheLeft({canvas, camera}){
         const cameraboxRightSide = this.camerabox.position.x + this.camerabox.width
         if(this.camerabox.position.x >= 5396) return
-        if(cameraboxRightSide >= canvas.width - 400) {
+        // console.log(this.camerabox.position.x);
+        // console.log(camera.position.x);
+        if(cameraboxRightSide >= 1024 - this.camerabox.width) {
             camera.position.x = -this.position.x + 400
+            background01.position.x += background01.velocity.x
+            if(player.velocity.x > 0 && player.velocity.x != 0)
+                background01.velocity.x = player.velocity.x -1
+            if(player.velocity.x < 0 && player.velocity.x != 0) 
+                background01.velocity.x = player.velocity.x +1
+            if(player.velocity.x === 0) 
+                background01.velocity.x = 0
 
-        background01.position.x += background01.velocity.x
-        if(player.velocity.x > 0 && player.velocity.x != 0) background01.velocity.x = player.velocity.x -1
-        if(player.velocity.x < 0 && player.velocity.x != 0) background01.velocity.x = player.velocity.x +1
-        if(player.velocity.x === 0) background01.velocity.x = 0
-
-        background02.position.x += background02.velocity.x
-        if(player.velocity.x > 0 && player.velocity.x != 0) background02.velocity.x = player.velocity.x -2
-        if(player.velocity.x < 0 && player.velocity.x != 0) background02.velocity.x = player.velocity.x +2
-        if(player.velocity.x === 0) background02.velocity.x = 0
-            
-        background03.position.x += background03.velocity.x
-        if(player.velocity.x > 0 && player.velocity.x != 0) background03.velocity.x = player.velocity.x -3
-        if(player.velocity.x < 0 && player.velocity.x != 0) background03.velocity.x = player.velocity.x +3
-        if(player.velocity.x === 0) background03.velocity.x = 0
+            background02.position.x += background02.velocity.x
+            if(player.velocity.x > 0 && player.velocity.x != 0) 
+                background02.velocity.x = player.velocity.x -2
+            if(player.velocity.x < 0 && player.velocity.x != 0) 
+                background02.velocity.x = player.velocity.x +2
+            if(player.velocity.x === 0) 
+                background02.velocity.x = 0
+                
+            background03.position.x += background03.velocity.x
+            if(player.velocity.x > 0 && player.velocity.x != 0) 
+                background03.velocity.x = player.velocity.x -3
+            if(player.velocity.x < 0 && player.velocity.x != 0) 
+                background03.velocity.x = player.velocity.x +3
+            if(player.velocity.x === 0) 
+                background03.velocity.x = 0
         }
     }
     shouldPanCameraToTheRight({canvas, camera}){
@@ -311,7 +322,7 @@ class Player extends Sprite {
                     obj[i].vida = 0
                     obj[i].velocity.x = 0
                     
-                    lives = lives - 5
+                    lives = lives - 1
                     
                     hit = true
                    
@@ -839,7 +850,7 @@ class Player extends Sprite {
                 decreaseTimer()
             }
             
-            if(transicion[i].identificador === 'transicion' && transicion[i].position.x  <= -1028) {
+            if(transicion[i].identificador === 'transicion' && transicion[i].position.x  <= -canvas.width) {
                 
                 transicion[i].velocity.x = 0
                 player.preventInput = false
