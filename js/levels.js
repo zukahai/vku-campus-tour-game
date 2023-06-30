@@ -20,7 +20,7 @@ let levels = {
             transicion = [
                 new Sprite({
                     position: {
-                        x: -1024,
+                        x: -canvas.width,
                         y: 0
                     },
                     velocity: {

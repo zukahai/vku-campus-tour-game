@@ -1,13 +1,13 @@
 function panel() {
     if(level != 0) {
         c.save()        
-        c.drawImage(hp2, 870, -6, 160, 84)
+        c.drawImage(hp2, canvas.width - 170, -6, 160, 84)
         c.fillStyle="#f62020"
-        c.fillRect(914, 12, lives, 24)
+        c.fillRect(canvas.width - 126.5, 12, lives, 24)
         c.fillStyle="#e66f14"
-        c.fillRect(914, 40, municion, 24)
-        c.drawImage(hp, 870, -6, 160, 84)
-        c.drawImage(cuadro, 898, 70, 100, 30)
+        c.fillRect(canvas.width - 126.5, 40, municion, 24)
+        c.drawImage(hp, canvas.width - 170, -6, 160, 84)
+        c.drawImage(cuadro, canvas.width - 130, 70, 100, 30)
         c.shadowColor="black"
         c.shadowBlur=2
         c.lineWidth=4
@@ -20,8 +20,8 @@ function panel() {
         c.fillStyle="#16db7f"
         c.font="12px NVN-PixelFJVerdana8pt"
         if(timer2 < 10) c.fillStyle="#f62020"
-        c.strokeText("TIME: " + timer2, 912, 93)
-        c.fillText("TIME: " + timer2, 912, 93)         
+        c.strokeText("TIME: " + timer2, canvas.width - 115, 93)
+        c.fillText("TIME: " + timer2, canvas.width - 115, 93)         
         c.restore()
     }
     if(lives <= 0) lives = 0
@@ -67,61 +67,64 @@ function transicionF() {
             c.shadowBlur= 2
             c.lineWidth= 4
             if(ganar === false && lives >= 1) {
-                c.strokeText("LEVEL ", transicion[i].position.x +500, 240)
-                c.fillText("LEVEL ", transicion[i].position.x +500, 240)
+                c.strokeText("LEVEL " + level, transicion[i].position.x +canvas.width / 2, 240)
+                c.fillText("LEVEL " + level, transicion[i].position.x +canvas.width / 2, 240)
                 c.font="100px NVN-PixelFJVerdana8pt" 
-                c.strokeText(level, transicion[i].position.x +700, 240)
-                c.fillText(level, transicion[i].position.x +700, 240)
                 if(level === 1) {
                     c.font="28px NVN-PixelFJVerdana8pt"
                     c.fillStyle="#fff"
-                    c.strokeText("Train Station", transicion[i].position.x +520, 290)
-                    c.fillText("Train Station", transicion[i].position.x +520, 290)
-                    c.drawImage(tren, transicion[i].position.x +280, 310, 473, 185)
+                    c.strokeText("Train Station", transicion[i].position.x + canvas.width / 2, 290)
+                    c.fillText("Train Station", transicion[i].position.x + canvas.width / 2, 290)
+                    let width_image = 473;
+                    c.drawImage(tren, transicion[i].position.x +canvas.width / 2 - width_image / 2, 310, 473, 185)
                 }
                 if(level === 2) {
                     c.font="28px NVN-PixelFJVerdana8pt"
                     c.fillStyle="#fff"
-                    c.strokeText("City", transicion[i].position.x +520, 290)
-                    c.fillText("City", transicion[i].position.x +520, 290)
-                    c.drawImage(edificio, transicion[i].position.x +430, 310, 181, 250)
+                    c.strokeText("City", transicion[i].position.x + canvas.width / 2, 290)
+                    c.fillText("City", transicion[i].position.x + canvas.width / 2, 290)
+                    let width_image = 181;
+                    c.drawImage(edificio, transicion[i].position.x + canvas.width / 2 - width_image / 2, 310, 181, 250)
                 }
                 if(level === 3) {
                     c.font="28px NVN-PixelFJVerdana8pt"
                     c.fillStyle="#fff"
-                    c.strokeText("Restaurant", transicion[i].position.x +520, 290)
-                    c.fillText("Restaurant", transicion[i].position.x +520, 290)
-                    c.drawImage(mostrador, transicion[i].position.x +280, 310, 500, 181)
+                    c.strokeText("Restaurant", transicion[i].position.x + canvas.width / 2, 290)
+                    c.fillText("Restaurant", transicion[i].position.x + canvas.width / 2, 290)
+                    let width_image = canvas.width / 2
+                    c.drawImage(mostrador, transicion[i].position.x + canvas.width / 2 - width_image / 2, 310, canvas.width / 2, 181)
                 }
                 if(level === 4) {
                     c.font="28px NVN-PixelFJVerdana8pt"
                     c.fillStyle="#fff"
-                    c.strokeText("VKU", transicion[i].position.x +520, 290)
-                    c.fillText("VKU", transicion[i].position.x +520, 290)
-                    c.drawImage(vku, transicion[i].position.x +385, 310, 300, 181)
+                    c.strokeText("VKU", transicion[i].position.x + canvas.width / 2, 290)
+                    c.fillText("VKU", transicion[i].position.x + canvas.width / 2, 290)
+                    let width_image = 300
+                    c.drawImage(vku, transicion[i].position.x + canvas.width / 2 - width_image / 2, 310, 300, 181)
                 }
             }
             if(ganar === true && lives >= 1) {
                 c.font="70px NVN-PixelFJVerdana8pt"
-                c.strokeText("CONGRATULATIONS", transicion[i].position.x +500, 230)
-                c.fillText("CONGRATULATIONS", transicion[i].position.x +500, 230)
+                c.strokeText("CONGRATULATIONS", transicion[i].position.x +canvas.width / 2, 230)
+                c.fillText("CONGRATULATIONS", transicion[i].position.x +canvas.width / 2, 230)
                 c.font="21px NVN-PixelFJVerdana8pt"
                 c.fillStyle="#fff"
-                c.strokeText("You arrived at work on time", transicion[i].position.x +500, 270)
-                c.fillText("You arrived at work on time", transicion[i].position.x +500, 270)
+                c.strokeText("You arrived at work on time", transicion[i].position.x +canvas.width / 2, 270)
+                c.fillText("You arrived at work on time", transicion[i].position.x +canvas.width / 2, 270)
                 c.drawImage(victor, transicion[i].position.x +390, 300, 200, 200)
             }
             if(muerte = true && lives <= 0) {
                 c.font="80px NVN-PixelFJVerdana8pt"
-                c.strokeText("GAME OVER", transicion[i].position.x +500, 240);
-                c.fillText("GAME OVER", transicion[i].position.x +500, 240)
+                c.strokeText("GAME OVER", transicion[i].position.x +canvas.width / 2, 240);
+                c.fillText("GAME OVER", transicion[i].position.x +canvas.width / 2, 240)
                 c.font="21px NVN-PixelFJVerdana8pt"
                 c.fillStyle="#fff"
-                c.strokeText("press enter to start", transicion[i].position.x +500, 280)
-                c.fillText("press enter to start", transicion[i].position.x +500, 280)
-                c.strokeText("or press c to continue", transicion[i].position.x +500, 312)
-                c.fillText("or press c to continue", transicion[i].position.x +500, 312)
-                c.drawImage(perder, transicion[i].position.x +390, 340, 200, 200)
+                c.strokeText("press enter to start", transicion[i].position.x +canvas.width / 2, 280)
+                c.fillText("press enter to start", transicion[i].position.x +canvas.width / 2, 280)
+                c.strokeText("or press c to continue", transicion[i].position.x +canvas.width / 2, 312)
+                c.fillText("or press c to continue", transicion[i].position.x +canvas.width / 2, 312)
+                let width_image = 200;
+                c.drawImage(perder, transicion[i].position.x + canvas.width / 2 - width_image / 2, 340, 200, 200)
             }
             
             c.restore()

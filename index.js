@@ -16,6 +16,10 @@ const c = canvas.getContext('2d')
 
 canvas.width = 32 * 32 // 1024
 canvas.height = 32 * 18 // 576
+height_screen = document.documentElement.clientHeight;
+width_screen = document.documentElement.clientWidth;
+// canvas.height = height_screen;
+canvas.width = width_screen;
 
 let parsedCollisions
 let collisionBlocks
@@ -152,7 +156,7 @@ let player = new Player({
     }
 })
 
-let level = 0
+let level = 1
 
 const keys = {
     ArrowUp: { 

@@ -731,7 +731,7 @@ class Player extends Sprite {
                     audioVictoria.currentTime = 0
                     audioVictoria.play()
 
-                    lives = lives + 10
+                    lives = lives + 20
                     obj[i].vida = 0
                 }
                 if(obj[i].identificador === 'nivel') {
