@@ -1056,6 +1056,110 @@ function crearMurcielagos() {
         }
     }, rand);
 }
+function crearMurcielagosLevel5() {
+    let rand = Math.round(Math.random() * (500 - 100)) + 200
+    myTimeout7 = setTimeout(function() {
+    
+        if(lives >= 1 && ganar === false) {
+            enemigos.push(
+                new Sprite({
+                    position: {
+                        x: Math.random() * 6000,
+                        y: (Math.random() > 0.5) ? -100 : canvas.height
+                    },
+                    velocity: {
+                        x: 0,
+                        y: 0
+                    },
+                    hitboxCR: {
+                        x: 0, 
+                        y: 0, 
+                        width: 50, 
+                        height: 50,
+                        disX: 24,
+                        disY: 22,
+                        efectoX: 6,
+                        efectoY: -18,
+                        efectoMX: -90,
+                        efectoMY: -90,
+                    },
+                    hitboxCL: {
+                        x: 0, 
+                        y: 0, 
+                        width: 50, 
+                        height: 50,
+                        disX: 24,
+                        disY: 22,
+                        efectoX: -6,
+                        efectoY: -14,
+                        efectoMX: -90,
+                        efectoMY: -90,
+                    },
+                    movimientoX: {
+                        posicion: 490,
+                        distI: 300,
+                        distD: 300,
+                    },
+                    imageSrc: './img/enemigos/murcielagoRL.png',
+                    frameRate: 3,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'murcielago',
+                    direccion: 'left',
+                    velocidad: 2,
+                    vida: 1,
+                    animations: {
+                        idleR:{
+                            frameRate: 3,
+                            frameBuffer: 6,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/murcielagoRR.png',
+                        },
+                        idleL:{
+                            frameRate: 3,
+                            frameBuffer: 6,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/murcielagoRL.png',
+                        },
+                        runR:{
+                            frameRate: 3,
+                            frameBuffer: 6,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/murcielagoRR.png',
+                        },
+                        runL:{
+                            frameRate: 3,
+                            frameBuffer: 6,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/murcielagoRL.png',
+                        },
+                        attackR:{
+                            frameRate: 3,
+                            frameBuffer: 6,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/murcielagoRR.png',
+                        },
+                        attackL:{
+                            frameRate: 3,
+                            frameBuffer: 6,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/murcielagoRL.png',
+                        },
+                    },
+                }),
+            )
+            crearMurcielagosLevel5()
+        }
+    }, rand);
+}
 function transicionN() {
     for(let i = 0; i < transicion.length; i++) {
 

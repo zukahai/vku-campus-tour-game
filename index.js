@@ -68,6 +68,7 @@ const tren = new Image();tren.src = "assets/tren.png"
 const edificio = new Image();edificio.src = "assets/edificio24.png"
 const mostrador = new Image();mostrador.src = "assets/mostrador.png"
 const vku = new Image();vku.src = "assets/vku.png"
+const night = new Image();night.src = "assets/night.png"
 const victor = new Image();victor.src = "assets/ganar.png"
 const perder = new Image();perder.src = "assets/perder.png"
 
