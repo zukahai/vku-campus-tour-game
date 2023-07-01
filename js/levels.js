@@ -3593,7 +3593,7 @@ let levels = {
                 new Sprite({
                     position: {
                         x: 6100,
-                        y: 300
+                        y: 350
                     },
                     hitboxO: {
                         x: 0, 
