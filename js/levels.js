@@ -12649,6 +12649,2136 @@ let levels = {
                 new Sprite({
                     position: {
                         x: 6100,
+                        y: 300
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 100, 
+                        height: 200,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hit4',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/puerta.png',
+                    frameRate: 1,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'nivel',
+                    vida: 1,
+                }),
+                
+            ]
+            efectoObjetos = []           
+        }
+    },
+    5: {
+        init: () => {
+            
+            // audioNivel.volume = .15
+            // audioNivel.play()
+            
+            camera = {
+                position:{
+                    x: 0,
+                    y: 0
+                }
+            }
+            parsedCollisions = collisionsLevel5.parse2D()
+            collisionBlocks = parsedCollisions.createObjectsFrom2D()
+            player.collisionBlocks = collisionBlocks
+            player.position.x = 20
+            player.position.y = 200
+            player.lastDirection = 'right'
+
+            transicion = [
+                new Sprite({
+                    position: {
+                        x: 0,
+                        y: 0
+                    },
+                    velocity: {
+                        x: 0,
+                        y: 0
+                    },
+                    imageSrc: './img/backgrounds/transicion.png',
+                    scale: 1,
+                    identificador: 'transicion',
+                }),
+            ]
+            background0 = new Sprite({
+                position:{
+                    x: 0,
+                    y: 0
+                },
+                velocity: {
+                    x: 0,
+                    y: 0
+                },
+                imageSrc: './img/backgrounds/background_d0.png'
+            })
+            background01 = new Sprite({
+                position:{
+                    x: -20,
+                    y: 0
+                },
+                velocity: {
+                    x: 0,
+                    y: 0
+                },
+                imageSrc: './img/backgrounds/background01.png'
+            })
+            background02 = new Sprite({
+                position:{
+                    x: -60,
+                    y: 0
+                },
+                velocity: {
+                    x: 0,
+                    y: 0
+                },
+                imageSrc: './img/backgrounds/background_d2.png'
+            })
+            background03 = new Sprite({
+                position:{
+                    x: -90,
+                    y: 0
+                },
+                velocity: {
+                    x: 0,
+                    y: 0
+                },
+                imageSrc: './img/backgrounds/l4.png'
+            })
+            background = new Sprite({
+                position:{
+                    x: 0,
+                    y: 0
+                },
+                velocity: {
+                    x: 0,
+                    y: 0
+                },
+                imageSrc: './img/backgrounds/l5.png'
+            })
+
+            proyectiles = []
+            efectoProyectiles = []
+
+            enemigos = [
+               // ================= cocineroRR ===================
+            //    new Sprite({
+                // position: {
+                //     x: 320,
+                //     y: 432
+                // },
+                // velocity: {
+                //     x: 2,
+                //     y: 0
+                // },
+                // hitboxCR: {
+                //     x: 0, 
+                //     y: 0, 
+                //     width: 40, 
+                //     height: 70,
+                //     disX: 36,
+                //     disY: 42,
+                //     efectoMX: -90,
+                //     efectoMY: -90,
+                // },
+                // hitboxCL: {
+                //     x: 0, 
+                //     y: 0, 
+                //     width: 40, 
+                //     height: 70,
+                //     disX: 36,
+                //     disY: 42,
+                //     efectoMX: -90,
+                //     efectoMY: -90,
+                // },
+                // movimientoX: {
+                //     posicion: 320,
+                //     distI: 200,
+                //     distD: 80,
+                // },
+                // imageSrc: 'img/enemigos/cocineroRR.png',
+                // frameRate: 6,
+                // frameBuffer: 8,
+                // loop: true,
+                // autoplay: true,
+                // scale: 1,
+                // identificador2: 'moverX',
+                // direccion: 'right',
+                // velocidad: 2,
+                // vida: 4,
+                // animations: {
+                //     idleR:{
+                //         frameRate: 6,
+                //         frameBuffer: 8,
+                //         loop: true,
+                //         autoplay: true,
+                //         imageSrc: './img/enemigos/cocineroRR.png',
+                //     },
+                //     idleL:{
+                //         frameRate: 6,
+                //         frameBuffer: 8,
+                //         loop: true,
+                //         autoplay: true,
+                //         imageSrc: './img/enemigos/cocineroRL.png',
+                //     },
+                //     runR:{
+                //         frameRate: 6,
+                //         frameBuffer: 6,
+                //         loop: true,
+                //         autoplay: true,
+                //         imageSrc: './img/enemigos/cocineroRR.png',
+                //     },
+                //     runL:{
+                //         frameRate: 6,
+                //         frameBuffer: 6,
+                //         loop: true,
+                //         autoplay: true,
+                //         imageSrc: './img/enemigos/cocineroRL.png',
+                //     },
+                // },
+                // }),
+                // // Poli
+                // new Sprite({
+                //     position: {
+                //         x: 560,
+                //         y: 432
+                //     },
+                //     velocity: {
+                //         x: -2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 560,
+                //         distI: 220,
+                //         distD: 100,
+                //     },
+                //     imageSrc: 'img/enemigos/poliRL.png',
+                //     frameRate: 6,
+                //     frameBuffer: 8,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     direccion: 'right',
+                //     velocidad: 2,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 6,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 6,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliRL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 740,
+                //         y: 432
+                //     },
+                //     velocity: {
+                //         x: 2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 740,
+                //         distI: 220,
+                //         distD: 100,
+                //     },
+                //     imageSrc: 'img/enemigos/poliRR.png',
+                //     frameRate: 6,
+                //     frameBuffer: 8,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     direccion: 'right',
+                //     velocidad: 2,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 6,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 6,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliRL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 1568,
+                //         y: 17
+                //     },
+                //     velocity: {
+                //         x: 2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 1568,
+                //         distI: 100,
+                //         distD: 100,
+                //     },
+                //     imageSrc: 'img/enemigos/poliRR.png',
+                //     frameRate: 6,
+                //     frameBuffer: 8,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     direccion: 'right',
+                //     velocidad: 2,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 6,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 6,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliRL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 1888,
+                //         y: 113
+                //     },
+                //     velocity: {
+                //         x: 2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 1888,
+                //         distI: 100,
+                //         distD: 100,
+                //     },
+                //     imageSrc: 'img/enemigos/poliRR.png',
+                //     frameRate: 6,
+                //     frameBuffer: 8,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     direccion: 'right',
+                //     velocidad: 2,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 6,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 6,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliRL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 2208,
+                //         y: 207
+                //     },
+                //     velocity: {
+                //         x: 2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 2208,
+                //         distI: 100,
+                //         distD: 100,
+                //     },
+                //     imageSrc: 'img/enemigos/poliRR.png',
+                //     frameRate: 6,
+                //     frameBuffer: 8,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     direccion: 'right',
+                //     velocidad: 2,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 6,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 6,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliRL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 2528,
+                //         y: 304
+                //     },
+                //     velocity: {
+                //         x: 2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 2528,
+                //         distI: 100,
+                //         distD: 100,
+                //     },
+                //     imageSrc: 'img/enemigos/poliRR.png',
+                //     frameRate: 6,
+                //     frameBuffer: 8,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     direccion: 'right',
+                //     velocidad: 2,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 6,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 6,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/poliRL.png',
+                //         },
+                //     },
+                // }),
+
+                // // ================= Gorras dy ==================
+                // new Sprite({
+                //     position: {
+                //         x: 292,
+                //         y: 271                    },
+                //     velocity: {
+                //         x: 0,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     imageSrc: './img/enemigos/gorrasRL.png',
+                //     frameRate: 6,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador4: 'tirador',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //     },
+                // }),
+
+                // new Sprite({
+                //     position: {
+                //         x: 484,
+                //         y: 207                    },
+                //     velocity: {
+                //         x: 0,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     imageSrc: './img/enemigos/gorrasRL.png',
+                //     frameRate: 6,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador4: 'tirador',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //     },
+                // }),
+
+                // new Sprite({
+                //     position: {
+                //         x: 676,
+                //         y: 143                    },
+                //     velocity: {
+                //         x: 0,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     imageSrc: './img/enemigos/gorrasRL.png',
+                //     frameRate: 6,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador4: 'tirador',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //     },
+                // }),
+                
+                // new Sprite({
+                //     position: {
+                //         x: 868,
+                //         y: 79                    },
+                //     velocity: {
+                //         x: 0,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     imageSrc: './img/enemigos/gorrasRL.png',
+                //     frameRate: 6,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador4: 'tirador',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //     },
+                // }),
+
+                // // ================= Gorras movimiento ==================
+                // new Sprite({
+                //     position: {
+                //         x: 1680,
+                //         y: 431
+                //     },
+                //     velocity: {
+                //         x: -2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 1680,
+                //         distI: 220,
+                //         distD: 100,
+                //     },
+                //     imageSrc: './img/enemigos/gorrasRL.png',
+                //     frameRate: 6,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     identificador4: 'tirador',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 1400,
+                //         y: 431
+                //     },
+                //     velocity: {
+                //         x: -2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 1400,
+                //         distI: 220,
+                //         distD: 100,
+                //     },
+                //     imageSrc: './img/enemigos/gorrasRL.png',
+                //     frameRate: 6,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     identificador4: 'tirador',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 1568,
+                //         y: 17
+                //     },
+                //     velocity: {
+                //         x: -2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 1568,
+                //         distI: 220,
+                //         distD: 100,
+                //     },
+                //     imageSrc: './img/enemigos/gorrasRL.png',
+                //     frameRate: 6,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     identificador4: 'tirador',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 1888,
+                //         y: 113
+                //     },
+                //     velocity: {
+                //         x: -2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 1888,
+                //         distI: 220,
+                //         distD: 100,
+                //     },
+                //     imageSrc: './img/enemigos/gorrasRL.png',
+                //     frameRate: 6,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     identificador4: 'tirador',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 2208,
+                //         y: 207
+                //     },
+                //     velocity: {
+                //         x: -2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 2208,
+                //         distI: 220,
+                //         distD: 100,
+                //     },
+                //     imageSrc: './img/enemigos/gorrasRL.png',
+                //     frameRate: 6,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     identificador4: 'tirador',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 2528,
+                //         y: 304
+                //     },
+                //     velocity: {
+                //         x: -2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 40, 
+                //         height: 50,
+                //         disX: 36,
+                //         disY: 62,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 2528,
+                //         distI: 220,
+                //         distD: 100,
+                //     },
+                //     imageSrc: './img/enemigos/gorrasRL.png',
+                //     frameRate: 6,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     identificador4: 'tirador',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 6,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasRL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 2,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/gorrasIL.png',
+                //         },
+                //     },
+                // }),
+
+                //  // ================= nube ==================
+                //  new Sprite({
+                //     position: {
+                //         x: 350,
+                //         y: 220
+                //     },
+                //     velocity: {
+                //         x: 2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 56, 
+                //         height: 50,
+                //         disX: 26,
+                //         disY: 36,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 56, 
+                //         height: 50,
+                //         disX: 26,
+                //         disY: 36,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 350,
+                //         distI: 250,
+                //         distD: 80,
+                //     },
+                //     imageSrc: './img/enemigos/nubeIL.png',
+                //     frameRate: 4,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 4,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 4,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 1300,
+                //         y: 280
+                //     },
+                //     velocity: {
+                //         x: 2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 56, 
+                //         height: 50,
+                //         disX: 26,
+                //         disY: 36,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 56, 
+                //         height: 50,
+                //         disX: 26,
+                //         disY: 36,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 1300,
+                //         distI: 250,
+                //         distD: 180,
+                //     },
+                //     imageSrc: './img/enemigos/nubeIL.png',
+                //     frameRate: 4,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 4,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 4,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 2200,
+                //         y: 280
+                //     },
+                //     velocity: {
+                //         x: 2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 56, 
+                //         height: 50,
+                //         disX: 26,
+                //         disY: 36,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 56, 
+                //         height: 50,
+                //         disX: 26,
+                //         disY: 36,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 2200,
+                //         distI: 250,
+                //         distD: 180,
+                //     },
+                //     imageSrc: './img/enemigos/nubeIL.png',
+                //     frameRate: 4,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 4,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 4,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 3200,
+                //         y: 280
+                //     },
+                //     velocity: {
+                //         x: 2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 56, 
+                //         height: 50,
+                //         disX: 26,
+                //         disY: 36,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 56, 
+                //         height: 50,
+                //         disX: 26,
+                //         disY: 36,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 3200,
+                //         distI: 250,
+                //         distD: 180,
+                //     },
+                //     imageSrc: './img/enemigos/nubeIL.png',
+                //     frameRate: 4,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 4,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 4,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //     },
+                // }),
+                // new Sprite({
+                //     position: {
+                //         x: 5400,
+                //         y: 280
+                //     },
+                //     velocity: {
+                //         x: 2,
+                //         y: 0
+                //     },
+                //     hitboxCR: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 56, 
+                //         height: 50,
+                //         disX: 26,
+                //         disY: 36,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     hitboxCL: {
+                //         x: 0, 
+                //         y: 0, 
+                //         width: 56, 
+                //         height: 50,
+                //         disX: 26,
+                //         disY: 36,
+                //         efectoMX: -90,
+                //         efectoMY: -90,
+                //     },
+                //     movimientoX: {
+                //         posicion: 5400,
+                //         distI: 350,
+                //         distD: 180,
+                //     },
+                //     imageSrc: './img/enemigos/nubeIL.png',
+                //     frameRate: 4,
+                //     frameBuffer: 10,
+                //     loop: true,
+                //     autoplay: true,
+                //     scale: 1,
+                //     identificador2: 'moverX',
+                //     direccion: 'left',
+                //     velocidad: 0,
+                //     vida: 4,
+                //     animations: {
+                //         idleR:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         idleL:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //         runR:{
+                //             frameRate: 4,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         runL:{
+                //             frameRate: 4,
+                //             frameBuffer: 8,
+                //             loop: true,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //         attackR:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIR.png',
+                //         },
+                //         attackL:{
+                //             frameRate: 4,
+                //             frameBuffer: 10,
+                //             loop: false,
+                //             autoplay: true,
+                //             imageSrc: './img/enemigos/nubeIL.png',
+                //         },
+                //     },
+                // }),
+            ]
+            efectoEnemigos = []
+            proyectilesEnemigos = []
+            efectoProyectilesEnemigos = []
+            crearMurcielagos()
+            dispararEnemigos()
+
+            objetos = [
+                // ================ Reloj =======================
+                new Sprite({
+                    position: {
+                        x: 2300,
+                        y: 290
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 50, 
+                        height: 32,
+                        disX: 18,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -16,
+                        escala: 1,
+                        sourc: 'hitR',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/reloj.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'reloj',
+                    identificador2: 5,
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 2040,
+                        y: 290
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 50, 
+                        height: 32,
+                        disX: 18,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -16,
+                        escala: 1,
+                        sourc: 'hitR',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/reloj.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'reloj',
+                    identificador2: 5,
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 400,
+                        y: 190
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 50, 
+                        height: 32,
+                        disX: 18,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -16,
+                        escala: 1,
+                        sourc: 'hitR',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/reloj.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'reloj',
+                    identificador2: 5,
+                    vida: 1,
+                }),
+                // ================ Naranja =======================
+                new Sprite({
+                    position: {
+                        x: 2200,
+                        y: 290
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 36, 
+                        height: 32,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hitN',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/naranja2.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'municion',
+                    identificador2: 30,
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 140,
+                        y: 415
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 36, 
+                        height: 32,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hitN',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/naranja2.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'municion',
+                    identificador2: 30,
+                    vida: 1,
+                }),
+                // ================ Puerta =======================
+                new Sprite({
+                    position: {
+                        x: 6100,
                         y: 360
                     },
                     hitboxO: {

@@ -102,6 +102,14 @@ function transicionF() {
                     let width_image = 300
                     c.drawImage(vku, transicion[i].position.x + canvas.width / 2 - width_image / 2, 310, 300, 181)
                 }
+                if(level === 5) {
+                    c.font="28px NVN-PixelFJVerdana8pt"
+                    c.fillStyle="#fff"
+                    c.strokeText("Dangerous night", transicion[i].position.x + canvas.width / 2, 290)
+                    c.fillText("Dangerous night", transicion[i].position.x + canvas.width / 2, 290)
+                    let width_image = 300
+                    c.drawImage(vku, transicion[i].position.x + canvas.width / 2 - width_image / 2, 310, 300, 181)
+                }
             }
             if(ganar === true && lives >= 1) {
                 c.font="70px NVN-PixelFJVerdana8pt"

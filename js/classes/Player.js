@@ -846,7 +846,7 @@ class Player extends Sprite {
                     if(ganar === false && lives >= 1) transicion[i].velocity.x = -14
                 }, 1000)
                 
-                timer = 60
+                timer = 120
                 decreaseTimer()
             }
             
