@@ -837,10 +837,10 @@ class Player extends Sprite {
                 transicion[i].position.x = 0
                 transicion[i].velocity.x = 0
 
-                levels[level].init()
                 portadaV = false
                 
                 resetIntervalos()
+                levels[level].init()
                 
                 setTimeout(() => {                                       
                     if(ganar === false && lives >= 1) transicion[i].velocity.x = -14
