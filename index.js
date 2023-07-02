@@ -159,7 +159,7 @@ let player = new Player({
     }
 })
 
-let level = 0
+let level = 1
 
 const keys = {
     ArrowUp: { 
@@ -187,9 +187,9 @@ let camera = {
 function animate() {
     
     //Tính fps
-    fps = Math.round(1000 / (Date.now() - lastTime))
-    lastTime = Date.now()
-    console.log(fps);
+    //fps = Math.round(1000 / (Date.now() - lastTime))
+    //lastTime = Date.now()
+    //console.log(fps);
 
     
     c.save()
