@@ -252,7 +252,8 @@ function animate() {
     
     transicionF()
 
-    window.requestAnimationFrame(animate)
+    // window.requestAnimationFrame(animate)
+    setTimeout(animate, 1000 / 60)
 
 }
 levels[level].init()
