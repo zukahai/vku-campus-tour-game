@@ -43,13 +43,30 @@ function portada() {
         c.shadowColor="black"
         c.shadowBlur=2
         c.lineWidth=4
-        c.fillStyle = '#f75f5f'
-        c.strokeText("VKU",canvas.width/2, canvas.height/2 + 10)
-        c.fillText("VKU",canvas.width/2, canvas.height/2 + 10)  
-        c.fillStyle = '#fff'      
+        c.fillStyle = '#00FFFF'
+        c.strokeText("VKU",canvas.width/2, canvas.height/2 - 100)
+        c.fillText("VKU",canvas.width/2, canvas.height/2 - 100) 
+
+        c.fillStyle = '#FF0000'      
+        c.font="34px NVN-PixelFJVerdana8pt"
+        c.strokeText("Press enter to start",canvas.width/2, canvas.height/2 + 100)
+        c.fillText("Press enter to start",canvas.width/2, canvas.height/2 + 100) 
+
         c.font="24px NVN-PixelFJVerdana8pt"
-        c.strokeText("press enter to start",canvas.width/2, canvas.height/2 + 48)
-        c.fillText("press enter to start",canvas.width/2, canvas.height/2 + 48) 
+        c.fillStyle = '#00FF00'
+        c.strokeText("Make by HaiZuka",canvas.width/2, canvas.height/2 - 50)
+        c.fillText("Make by HaiZuka",canvas.width/2, canvas.height/2 - 50)
+
+        c.font="24px NVN-PixelFJVerdana8pt"
+        c.fillStyle = '#00FF00'
+        c.strokeText("Design by HoangDevils",canvas.width/2, canvas.height/2)
+        c.fillText("Design by HoangDevils",canvas.width/2, canvas.height/2)
+
+        c.font="24px NVN-PixelFJVerdana8pt"
+        c.fillStyle = '#00FF00'
+        c.strokeText("Fonts of Font Việt Hoá NVN",canvas.width/2, canvas.height/2 + 50)
+        c.fillText("Fonts of Font Việt Hoá NVN",canvas.width/2, canvas.height/2 + 50)
+
         c.restore()       
     }
 }
@@ -129,10 +146,10 @@ function transicionF() {
                 c.fillText("GAME OVER", transicion[i].position.x +canvas.width / 2, 240)
                 c.font="21px NVN-PixelFJVerdana8pt"
                 c.fillStyle="#fff"
-                c.strokeText("press enter to start", transicion[i].position.x +canvas.width / 2, 280)
-                c.fillText("press enter to start", transicion[i].position.x +canvas.width / 2, 280)
-                c.strokeText("or press c to continue", transicion[i].position.x +canvas.width / 2, 312)
-                c.fillText("or press c to continue", transicion[i].position.x +canvas.width / 2, 312)
+                c.strokeText("Press enter to start", transicion[i].position.x +canvas.width / 2, 280)
+                c.fillText("Press enter to start", transicion[i].position.x +canvas.width / 2, 280)
+                c.strokeText("or Press c to continue", transicion[i].position.x +canvas.width / 2, 312)
+                c.fillText("or Press c to continue", transicion[i].position.x +canvas.width / 2, 312)
                 let width_image = 200;
                 c.drawImage(perder, transicion[i].position.x + canvas.width / 2 - width_image / 2, 340, 200, 200)
             }

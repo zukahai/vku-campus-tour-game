@@ -42,7 +42,7 @@ let levels = {
                     x: 0,
                     y: 0
                 },
-                imageSrc: './img/backgrounds/background0.png'
+                imageSrc: './img/backgrounds/background_d0.png'
             })
             background01 = new Sprite({
                 position:{
@@ -64,7 +64,7 @@ let levels = {
                     x: 0,
                     y: 0
                 },
-                imageSrc: './img/backgrounds/background02.png'
+                imageSrc: './img/backgrounds/l3.png'
             })
             background03 = new Sprite({
                 position:{
@@ -75,7 +75,7 @@ let levels = {
                     x: 0,
                     y: 0
                 },
-                imageSrc: './img/backgrounds/background03.png'
+                imageSrc: './img/backgrounds/l4.png'
             })
             background = new Sprite({
                 position:{
@@ -86,7 +86,7 @@ let levels = {
                     x: 0,
                     y: 0
                 },
-                imageSrc: './img/backgrounds/background.png'
+                imageSrc: './img/backgrounds/l5.png'
             })
 
             proyectiles = []
@@ -96,8 +96,8 @@ let levels = {
                 // =================== Cuca =======================
                 new Sprite({
                     position: {
-                        x: 936,
-                        y: 430
+                        x: 956,
+                        y: 230
                     },
                     velocity: {
                         x: 0,
@@ -176,7 +176,7 @@ let levels = {
                 new Sprite({
                     position: {
                         x: 720,
-                        y: 274
+                        y: 430
                     },
                     velocity: {
                         x: 2,
@@ -255,7 +255,7 @@ let levels = {
                 new Sprite({
                     position: {
                         x: 220,
-                        y: 400
+                        y: 430
                     },
                     velocity: {
                         x: 2,
@@ -335,7 +335,7 @@ let levels = {
                 new Sprite({
                     position: {
                         x: 590,
-                        y: 276
+                        y: 430
                     },
                     velocity: {
                         x: -2,
