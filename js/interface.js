@@ -131,12 +131,12 @@ function transicionF() {
             }
             if(ganar === true && lives >= 1) {
                 c.font="70px NVN-PixelFJVerdana8pt"
-                c.strokeText("CONGRATULATIONS", transicion[i].position.x +canvas.width / 2, 230)
-                c.fillText("CONGRATULATIONS", transicion[i].position.x +canvas.width / 2, 230)
-                c.font="21px NVN-PixelFJVerdana8pt"
+                c.strokeText("CONGRATULATIONS", transicion[i].position.x +canvas.width / 2, 200)
+                c.fillText("CONGRATULATIONS", transicion[i].position.x +canvas.width / 2, 200)
+                c.font="40px NVN-PixelFJVerdana8pt"
                 c.fillStyle="#fff"
-                c.strokeText("You arrived at work on time", transicion[i].position.x +canvas.width / 2, 270)
-                c.fillText("You arrived at work on time", transicion[i].position.x +canvas.width / 2, 270)
+                c.strokeText("Your score: " + score, transicion[i].position.x +canvas.width / 2, 270)
+                c.fillText("Your score: " + score, transicion[i].position.x +canvas.width / 2, 270)
                 let width_image = 200;
                 c.drawImage(victor, transicion[i].position.x + canvas.width / 2 - width_image / 2, 300, 200, 200)
             }

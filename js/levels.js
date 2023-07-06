@@ -12798,7 +12798,7 @@ let levels = {
                 }),
                 new Sprite({
                     position: {
-                        x: 140,
+                        x: 120,
                         y: 415
                     },
                     hitboxO: {
@@ -12822,6 +12822,61 @@ let levels = {
                     scale: 1,
                     identificador: 'municion',
                     identificador2: 30,
+                    vida: 1,
+                }),
+                // ================ corazon =======================
+                new Sprite({
+                    position: {
+                        x: 167,
+                        y: 415
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 32, 
+                        height: 36,
+                        disX: 18,
+                        disY: 7,
+                        efectoX: -4,
+                        efectoY: -4,
+                        escala: 1,
+                        sourc: 'hit4',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/corazon.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'corazon',
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 810,
+                        y: 70
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 32, 
+                        height: 36,
+                        disX: 18,
+                        disY: 7,
+                        efectoX: -4,
+                        efectoY: -4,
+                        escala: 1,
+                        sourc: 'hit4',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/corazon.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'corazon',
                     vida: 1,
                 }),
                 // ================ Puerta =======================
@@ -15031,6 +15086,61 @@ let levels = {
                     scale: 1,
                     identificador: 'municion',
                     identificador2: 30,
+                    vida: 1,
+                }),
+                // ================ corazon =======================
+                new Sprite({
+                    position: {
+                        x: 200,
+                        y: 415
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 32, 
+                        height: 36,
+                        disX: 18,
+                        disY: 7,
+                        efectoX: -4,
+                        efectoY: -4,
+                        escala: 1,
+                        sourc: 'hit4',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/corazon.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'corazon',
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 2050,
+                        y: 415
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 32, 
+                        height: 36,
+                        disX: 18,
+                        disY: 7,
+                        efectoX: -4,
+                        efectoY: -4,
+                        escala: 1,
+                        sourc: 'hit4',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/corazon.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'corazon',
                     vida: 1,
                 }),
                 // ================ Puerta =======================
