@@ -702,7 +702,6 @@ let levels = {
             efectoEnemigos = []
             proyectilesEnemigos = []
             efectoProyectilesEnemigos = []
-            crearMurcielagos()
             dispararEnemigos()
 
             objetos = [
