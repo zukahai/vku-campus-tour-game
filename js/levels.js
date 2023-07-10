@@ -13351,6 +13351,158 @@ let levels = {
                         },
                     },
                 }),
+
+                //==============cuca================
+                new Sprite({
+                    position: {
+                        x: 120,
+                        y: 430
+                    },
+                    velocity: {
+                        x: 0,
+                        y: -5
+                    },
+                    hitboxCR: {
+                        x: 0, 
+                        y: 0, 
+                        width: 40, 
+                        height: 40,
+                        disX: 22,
+                        disY: 40,
+                        efectoMX: -90,
+                        efectoMY: -90,
+                    },
+                    hitboxCL: {
+                        x: 0, 
+                        y: 0, 
+                        width: 40, 
+                        height: 40,
+                        disX: 20,
+                        disY: 40,
+                        efectoMX: -90,
+                        efectoMY: -90,
+                    },
+                    movimientoY: {
+                        posicion: 370,
+                        distI: 200,
+                        distD: 1,
+                    },
+                    imageSrc: './img/enemigos/cucaRL.png',
+                    frameRate: 2,
+                    frameBuffer: 8,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador2: 'moverY',
+                    direccion: 'left',
+                    velocidad: 2,
+                    vida: 4,
+                    animations: {
+                        idleR:{
+                            frameRate: 2,
+                            frameBuffer: 8,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/cucaIR.png',
+                        },
+                        idleL:{
+                            frameRate: 2,
+                            frameBuffer: 8,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/cucaIL.png',
+                        },
+                        runR:{
+                            frameRate: 2,
+                            frameBuffer: 6,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/cucaRR.png',
+                        },
+                        runL:{
+                            frameRate: 2,
+                            frameBuffer: 6,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/cucaRL.png',
+                        },
+                    },
+                }),
+                new Sprite({
+                    position: {
+                        x: 5150,
+                        y: 20
+                    },
+                    velocity: {
+                        x: 0,
+                        y: -5
+                    },
+                    hitboxCR: {
+                        x: 0, 
+                        y: 0, 
+                        width: 40, 
+                        height: 40,
+                        disX: 22,
+                        disY: 40,
+                        efectoMX: -90,
+                        efectoMY: -90,
+                    },
+                    hitboxCL: {
+                        x: 0, 
+                        y: 0, 
+                        width: 40, 
+                        height: 40,
+                        disX: 20,
+                        disY: 40,
+                        efectoMX: -90,
+                        efectoMY: -90,
+                    },
+                    movimientoY: {
+                        posicion: 100,
+                        distI: 200,
+                        distD: 20,
+                    },
+                    imageSrc: './img/enemigos/cucaRL.png',
+                    frameRate: 2,
+                    frameBuffer: 8,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador2: 'moverY',
+                    direccion: 'left',
+                    velocidad: 2,
+                    vida: 4,
+                    animations: {
+                        idleR:{
+                            frameRate: 2,
+                            frameBuffer: 8,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/cucaIR.png',
+                        },
+                        idleL:{
+                            frameRate: 2,
+                            frameBuffer: 8,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/cucaIL.png',
+                        },
+                        runR:{
+                            frameRate: 2,
+                            frameBuffer: 6,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/cucaRR.png',
+                        },
+                        runL:{
+                            frameRate: 2,
+                            frameBuffer: 6,
+                            loop: true,
+                            autoplay: true,
+                            imageSrc: './img/enemigos/cucaRL.png',
+                        },
+                    },
+                }),
                 
             ]
             efectoEnemigos = []
