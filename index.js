@@ -69,7 +69,7 @@ const edificio = new Image();edificio.src = "assets/edificio24.png"
 const mostrador = new Image();mostrador.src = "assets/mostrador.png"
 const vku = new Image();vku.src = "assets/vku.png"
 const night = new Image();night.src = "assets/night.png"
-const victor = new Image();victor.src = "assets/ganar.png"
+const victor = new Image();victor.src = "assets/perder.png"
 const perder = new Image();perder.src = "assets/perder.png"
 
 let player = new Player({
@@ -159,7 +159,7 @@ let player = new Player({
     }
 })
 
-let level = 0
+let level = 5
 
 const keys = {
     ArrowUp: { 
