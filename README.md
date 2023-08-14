@@ -14,7 +14,7 @@
     │   ├── perder.png
     │   └── tren.png
     ├── audio
-    │   ├── collision.mp3
+    │   ├── collision.mp3 
     │   ├── muerte.mp3
     │   ├── over.mp3
     │   ├── shoot.mp3
@@ -38,7 +38,7 @@
     │   │   ├── background3.png
     │   │   └── transicion.png
     │   ├── enemigos
-    │   │   ├── blancaRL.png
+    │   │   ├── blancaRL.pngh
     │   │   ├── blancaRR.png
     │   │   ├── cocineroIL.png
     │   │   ├── cocineroIR.png
