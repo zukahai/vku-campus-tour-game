@@ -1162,8 +1162,8 @@ function crearMurcielagosLevel5() {
 }
 function transicionN() {
     for(let i = 0; i < transicion.length; i++) {
-
         transicion[i].velocity.x = 14
+        score += 5000
         level++
         preventTransicion = true
     }
@@ -1181,6 +1181,7 @@ function transicionG() {
             transicion[i].velocity.x = 14
             preventTransicion = true               
         }
+        score += 5000
         
     }
 }

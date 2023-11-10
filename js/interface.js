@@ -129,7 +129,7 @@ function transicionF() {
                 }
                 
             }
-            if(ganar === true && lives >= 1) {
+            if(ganar === true && lives >= 1) {  
                 c.font="70px NVN-PixelFJVerdana8pt"
                 c.strokeText("CONGRATULATIONS", transicion[i].position.x +canvas.width / 2, 200)
                 c.fillText("CONGRATULATIONS", transicion[i].position.x +canvas.width / 2, 200)
