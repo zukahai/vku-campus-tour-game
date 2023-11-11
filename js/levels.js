@@ -3517,8 +3517,8 @@ let levels = {
                 // ================ Municion =======================
                 new Sprite({
                     position: {
-                        x: 424,
-                        y: 340
+                        x: 350,
+                        y: 430
                     },
                     hitboxO: {
                         x: 0, 
