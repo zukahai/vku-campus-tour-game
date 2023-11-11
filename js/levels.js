@@ -68,7 +68,7 @@ let levels = {
             })
             background03 = new Sprite({
                 position:{
-                    x: -90,
+                    x: 0,
                     y: 0
                 },
                 velocity: {
@@ -811,8 +811,6 @@ let levels = {
             parsedCollisions = collisionsLevel1.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
-            player.position.x = 20
-            player.position.y = 200
             player.lastDirection = 'right'
 
             transicion = [
@@ -3814,8 +3812,6 @@ let levels = {
             parsedCollisions = collisionsLevel2.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
-            player.position.x = 20
-            player.position.y = 200
             player.lastDirection = 'right'
 
             transicion = [
@@ -6900,8 +6896,6 @@ let levels = {
             parsedCollisions = collisionsLevel3.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
-            player.position.x = 20
-            player.position.y = 200
             player.lastDirection = 'right'
 
             transicion = [
@@ -10741,8 +10735,6 @@ let levels = {
             parsedCollisions = collisionsLevel4.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
-            player.position.x = 20
-            player.position.y = 200
             player.lastDirection = 'right'
 
             transicion = [
@@ -13757,8 +13749,6 @@ let levels = {
             parsedCollisions = collisionsLevel5.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
-            player.position.x = 20
-            player.position.y = 200
             player.lastDirection = 'right'
 
             transicion = [

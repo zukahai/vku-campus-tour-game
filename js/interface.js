@@ -1,27 +1,30 @@
 function panel() {
     if(level != 0) {
-        c.save()        
-        c.drawImage(hp2, canvas.width - 170, -6, 160, 84)
+        c.save()    
+        let rate = fullScreen() / 100.0
+        let currentScreenWidth = canvas.width / rate
+        let x_ = currentScreenWidth + (canvas.width - currentScreenWidth) / 2
+        c.drawImage(hp2, x_ - 170, -6, 160, 84)
         c.fillStyle="#f62020"
-        c.fillRect(canvas.width - 126.5, 12, lives, 24)
+        c.fillRect(x_ - 126.5, 12, lives, 24)
         c.fillStyle="#e66f14"
-        c.fillRect(canvas.width - 126.5, 40, municion, 24)
-        c.drawImage(hp, canvas.width - 170, -6, 160, 84)
-        c.drawImage(cuadro, canvas.width - 130, 70, 100, 30)
+        c.fillRect(x_ - 126.5, 40, municion, 24)
+        c.drawImage(hp, x_ - 170, -6, 160, 84)
+        c.drawImage(cuadro, x_ - 130, 70, 100, 30)
         c.shadowColor="black"
         c.shadowBlur=2
         c.lineWidth=4
         c.fillStyle="#fff"
         c.font="15px NVN-PixelFJVerdana8pt" 
-        c.strokeText("LEVEL: " + level, 14, 28)
-        c.fillText("LEVEL: " + level, 14, 28)
-        c.strokeText("SCORE: " + score, 110, 28)
-        c.fillText("SCORE: " + score, 110, 28)
+        c.strokeText("LEVEL: " + level, 14 + (canvas.width - currentScreenWidth) / 2, 28)
+        c.fillText("LEVEL: " + level, 14 + (canvas.width - currentScreenWidth) / 2, 28)
+        c.strokeText("SCORE: " + score, 110 + (canvas.width - currentScreenWidth) / 2, 28)
+        c.fillText("SCORE: " + score, 110 + (canvas.width - currentScreenWidth) / 2, 28)
         c.fillStyle="#16db7f"
         c.font="12px NVN-PixelFJVerdana8pt"
         if(timer2 < 10) c.fillStyle="#f62020"
-        c.strokeText("TIME: " + timer2, canvas.width - 115, 93)
-        c.fillText("TIME: " + timer2, canvas.width - 115, 93)         
+        c.strokeText("TIME: " + timer2, x_ - 115, 93)
+        c.fillText("TIME: " + timer2, x_ - 115, 93)         
         c.restore()
     }
     if(lives <= 0) lives = 0

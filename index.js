@@ -75,7 +75,7 @@ const perder = new Image();perder.src = "assets/perder.png"
 let player = new Player({
     position: {
         x: 20,
-        y: 200
+        y: 500
     },
     imageSrc: './img/player/idleR.png',
     scale: 1,
@@ -251,13 +251,40 @@ function animate() {
     portada() 
     
     transicionF()
+    // if (player.position.x <= 100)
+    //     player.position.x = 100
 
     // window.requestAnimationFrame(animate)
+    configPostion()
     setTimeout(animate, 1000 / 60)
 
 }
+
+function fullScreen() {
+    let chieuDaiManHinh = document.documentElement.clientHeight
+    let persen = (chieuDaiManHinh / 576) * 100
+    document.body.style.zoom = persen + "%";
+    return persen
+}
+
+function configPostion() {
+    switch (level) {
+        case 0:
+            player.position.x = 300
+            player.position.y = 500
+            break;
+        case 1:
+            if (player.position.x <= 100)
+                player.position.x = 100
+            break;
+    }
+}
+
 levels[level].init()
 animate()
+fullScreen()
+persen = fullScreen() / 100.0
+console.log(player.position);
 
 
 

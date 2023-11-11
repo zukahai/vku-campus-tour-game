@@ -765,6 +765,7 @@ class Player extends Sprite {
 
                     player.velocity.x = 0
                     ganar = true
+                    score += 5000
 
                     if(player.lastDirection === 'left' && player.velocity.x === 0) this.switchSprite('idleLeft')
                     if(player.lastDirection === 'right' && player.velocity.x === 0) this.switchSprite('idleRight')
@@ -1161,9 +1162,9 @@ function crearMurcielagosLevel5() {
     }, rand);
 }
 function transicionN() {
+    score += 5000
     for(let i = 0; i < transicion.length; i++) {
         transicion[i].velocity.x = 14
-        score += 5000
         level++
         preventTransicion = true
     }
@@ -1181,7 +1182,6 @@ function transicionG() {
             transicion[i].velocity.x = 14
             preventTransicion = true               
         }
-        score += 5000
         
     }
 }
