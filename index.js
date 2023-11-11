@@ -272,6 +272,8 @@ function configPostion() {
     let currentScreenWidth = canvas.width / rate
     if (player.position.x <= canvas.width - currentScreenWidth - player.width)
         player.position.x = canvas.width - currentScreenWidth - player.width
+    if (player.position.y > 576)
+        player.position.y = 400
 }
 
 levels[level].init()
