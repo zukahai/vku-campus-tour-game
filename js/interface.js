@@ -134,14 +134,16 @@ function transicionF() {
             }
             if(ganar === true && lives >= 1) {  
                 c.font="70px NVN-PixelFJVerdana8pt"
-                c.strokeText("CONGRATULATIONS", transicion[i].position.x +canvas.width / 2, 200)
-                c.fillText("CONGRATULATIONS", transicion[i].position.x +canvas.width / 2, 200)
+                c.strokeText("CONGRATULATIONS", transicion[i].position.x +canvas.width / 2, 150)
+                c.fillText("CONGRATULATIONS", transicion[i].position.x +canvas.width / 2, 150)
                 c.font="40px NVN-PixelFJVerdana8pt"
                 c.fillStyle="#fff"
-                c.strokeText("Your score: " + score, transicion[i].position.x +canvas.width / 2, 270)
-                c.fillText("Your score: " + score, transicion[i].position.x +canvas.width / 2, 270)
+                c.strokeText("Your score: " + score, transicion[i].position.x +canvas.width / 2, 220)
+                c.fillText("Your score: " + score, transicion[i].position.x +canvas.width / 2, 220)
+                c.strokeText("Press enter to start", transicion[i].position.x +canvas.width / 2, 520)
+                c.fillText("Press enter to start", transicion[i].position.x +canvas.width / 2, 520)
                 let width_image = 200;
-                c.drawImage(victor, transicion[i].position.x + canvas.width / 2 - width_image / 2, 300, 200, 200)
+                c.drawImage(victor, transicion[i].position.x + canvas.width / 2 - width_image / 2, 260, 200, 200)
             }
             if(muerte = true && lives <= 0) {
                 c.font="80px NVN-PixelFJVerdana8pt"
@@ -151,8 +153,8 @@ function transicionF() {
                 c.fillStyle="#fff"
                 c.strokeText("Press enter to start", transicion[i].position.x +canvas.width / 2, 280)
                 c.fillText("Press enter to start", transicion[i].position.x +canvas.width / 2, 280)
-                c.strokeText("or Press c to continue", transicion[i].position.x +canvas.width / 2, 312)
-                c.fillText("or Press c to continue", transicion[i].position.x +canvas.width / 2, 312)
+                c.strokeText("or Press c to continue (Scores will be initialized to zero)", transicion[i].position.x +canvas.width / 2, 312)
+                c.fillText("or Press c to continue (Scores will be initialized to zero", transicion[i].position.x +canvas.width / 2, 312)
                 let width_image = 200;
                 c.drawImage(perder, transicion[i].position.x + canvas.width / 2 - width_image / 2, 340, 200, 200)
             }

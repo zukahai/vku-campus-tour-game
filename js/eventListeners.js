@@ -5,9 +5,7 @@ window.addEventListener('keydown', (event) => {
     switch (event.key){
         case 'Enter':
             if(level === 0){
-                
                 for(let i = 0; i < transicion.length; i++) {
-
                     transicion[i].velocity.x = 14
                     level = 1
                     preventTransicion = true
@@ -16,7 +14,6 @@ window.addEventListener('keydown', (event) => {
                 }
             }
             if(muerte === true){
-
                 resetIntervalos()
                 muerte = false
                 lives = 100
@@ -29,6 +26,10 @@ window.addEventListener('keydown', (event) => {
                 levels[level].init()
                 clearTimeout(timerId)
 
+            }
+            if(ganar === true){
+                // làm mới lại trang f5
+                window.location.reload()
             }
             break
 

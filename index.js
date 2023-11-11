@@ -69,7 +69,7 @@ const edificio = new Image();edificio.src = "assets/edificio24.png"
 const mostrador = new Image();mostrador.src = "assets/mostrador.png"
 const vku = new Image();vku.src = "assets/vku.png"
 const night = new Image();night.src = "assets/night.png"
-const victor = new Image();victor.src = "assets/perder.png"
+const victor = new Image();victor.src = "assets/victor.png"
 const perder = new Image();perder.src = "assets/perder.png"
 
 let player = new Player({
@@ -268,32 +268,10 @@ function fullScreen() {
 }
 
 function configPostion() {
-    switch (level) {
-        case 0:
-            player.position.x = 300
-            player.position.y = 500
-            break
-        case 1:
-            if (player.position.x <= 100)
-                player.position.x = 100
-            break
-        case 2:
-            if (player.position.x <= 85)
-                player.position.x = 85
-            break
-        case 3:
-            if (player.position.x <= 90)
-                player.position.x = 90
-            break
-        case 4:
-            if (player.position.x <= 70)
-                player.position.x = 70
-            break;
-        case 5:
-            if (player.position.x <= 90)
-                player.position.x = 90
-            break;
-    }
+    let rate = fullScreen() / 100.0
+    let currentScreenWidth = canvas.width / rate
+    if (player.position.x <= canvas.width - currentScreenWidth - player.width)
+        player.position.x = canvas.width - currentScreenWidth - player.width
 }
 
 levels[level].init()
