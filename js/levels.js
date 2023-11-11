@@ -15,6 +15,7 @@ let levels = {
             parsedCollisions = collisionsLevel1.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
+            player.position.x = 0
             
 
             transicion = [
@@ -812,6 +813,7 @@ let levels = {
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
             player.lastDirection = 'right'
+            player.position.x = 0
 
             transicion = [
                 new Sprite({
@@ -3813,6 +3815,7 @@ let levels = {
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
             player.lastDirection = 'right'
+            player.position.x = 0
 
             transicion = [
                 new Sprite({
@@ -6897,6 +6900,7 @@ let levels = {
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
             player.lastDirection = 'right'
+            player.position.x = 0
 
             transicion = [
                 new Sprite({
@@ -10736,6 +10740,7 @@ let levels = {
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
             player.lastDirection = 'right'
+            player.position.x = 0
 
             transicion = [
                 new Sprite({
@@ -13750,6 +13755,7 @@ let levels = {
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
             player.lastDirection = 'right'
+            player.position.x = 0
 
             transicion = [
                 new Sprite({

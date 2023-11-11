@@ -272,10 +272,26 @@ function configPostion() {
         case 0:
             player.position.x = 300
             player.position.y = 500
-            break;
+            break
         case 1:
             if (player.position.x <= 100)
                 player.position.x = 100
+            break
+        case 2:
+            if (player.position.x <= 85)
+                player.position.x = 85
+            break
+        case 3:
+            if (player.position.x <= 90)
+                player.position.x = 90
+            break
+        case 4:
+            if (player.position.x <= 70)
+                player.position.x = 70
+            break;
+        case 5:
+            if (player.position.x <= 90)
+                player.position.x = 90
             break;
     }
 }

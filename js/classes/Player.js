@@ -1166,6 +1166,7 @@ function transicionN() {
     for(let i = 0; i < transicion.length; i++) {
         transicion[i].velocity.x = 14
         level++
+        console.log(level);
         preventTransicion = true
     }
 }
