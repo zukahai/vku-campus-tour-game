@@ -6602,7 +6602,7 @@ let levels = {
                 // ================ Municion =======================
                 new Sprite({
                     position: {
-                        x: 200,
+                        x: 600,
                         y: 340
                     },
                     hitboxO: {
@@ -6685,6 +6685,34 @@ let levels = {
                     vida: 1,
                 }),
                 // ================ Reloj =======================
+                 new Sprite({
+                    position: {
+                        x: 744,
+                        y: 200
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 50, 
+                        height: 32,
+                        disX: 18,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -16,
+                        escala: 1,
+                        sourc: 'hitR',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/reloj.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'reloj',
+                    identificador2: 5,
+                    vida: 1,
+                }),
                 new Sprite({
                     position: {
                         x: 744,
@@ -6798,6 +6826,33 @@ let levels = {
                     vida: 1,
                 }),              
                 // ================ Corazon =======================
+                new Sprite({
+                    position: {
+                        x: 845,
+                        y: 340
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 34, 
+                        height: 34,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hit4',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/corazon.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'corazon',
+                    vida: 1,
+                }),
                 new Sprite({
                     position: {
                         x: 3500,
@@ -10441,7 +10496,7 @@ let levels = {
                 // ================ Municion =======================
                 new Sprite({
                     position: {
-                        x: 200,
+                        x: 500,
                         y: 340
                     },
                     hitboxO: {
@@ -13625,7 +13680,35 @@ let levels = {
                 }),
                 new Sprite({
                     position: {
-                        x: 120,
+                        x: 600,
+                        y: 415
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 36, 
+                        height: 32,
+                        disX: 0,
+                        disY: 0,
+                        efectoX: -20,
+                        efectoY: -26,
+                        escala: 1,
+                        sourc: 'hitN',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/naranja2.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'municion',
+                    identificador2: 30,
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 800,
                         y: 415
                     },
                     hitboxO: {
@@ -13654,7 +13737,34 @@ let levels = {
                 // ================ corazon =======================
                 new Sprite({
                     position: {
-                        x: 167,
+                        x: 700,
+                        y: 415
+                    },
+                    hitboxO: {
+                        x: 0, 
+                        y: 0, 
+                        width: 32, 
+                        height: 36,
+                        disX: 18,
+                        disY: 7,
+                        efectoX: -4,
+                        efectoY: -4,
+                        escala: 1,
+                        sourc: 'hit4',
+                        rate: 10,
+                    },
+                    imageSrc: './img/objetos/corazon.png',
+                    frameRate: 4,
+                    frameBuffer: 6,
+                    loop: true,
+                    autoplay: true,
+                    scale: 1,
+                    identificador: 'corazon',
+                    vida: 1,
+                }),
+                new Sprite({
+                    position: {
+                        x: 900,
                         y: 415
                     },
                     hitboxO: {
@@ -15888,8 +15998,8 @@ let levels = {
                 }),
                 new Sprite({
                     position: {
-                        x: 140,
-                        y: 415
+                        x: 540,
+                        y: 500
                     },
                     hitboxO: {
                         x: 0, 
@@ -15917,8 +16027,8 @@ let levels = {
                 // ================ corazon =======================
                 new Sprite({
                     position: {
-                        x: 200,
-                        y: 415
+                        x: 700,
+                        y: 500
                     },
                     hitboxO: {
                         x: 0, 
