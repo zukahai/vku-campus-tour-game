@@ -159,7 +159,7 @@ let player = new Player({
     }
 })
 
-let level = 5
+let level = 0
 
 const keys = {
     ArrowUp: { 
