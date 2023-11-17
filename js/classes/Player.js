@@ -229,7 +229,7 @@ class Player extends Sprite {
                                 y: this.hitbox.position.y + 20
                             },
                             velocity: {
-                                x: 9 + player.velocity.x/2,
+                                x: 15 + player.velocity.x/2,
                                 y: 0
                             },
                             imageSrc: 'img/proyectiles/naranja.png',
@@ -238,7 +238,7 @@ class Player extends Sprite {
                             scale: 1,
                             identificador: 'disparo',
                             vida: 1,
-                            posicion: this.hitbox.position.x + 68
+                            posicion: this.hitbox.position.x + 268
                         })
                     )
                 }, 10)
@@ -254,7 +254,7 @@ class Player extends Sprite {
                                 y: this.hitbox.position.y + 20
                             },
                             velocity: {
-                                x: -9 + player.velocity.x/2,
+                                x: -15 + player.velocity.x/2,
                                 y: 0
                             },
                             imageSrc: 'img/proyectiles/naranja.png',
@@ -263,7 +263,7 @@ class Player extends Sprite {
                             scale: 1,
                             identificador: 'disparo',
                             vida: 1,
-                            posicion: this.hitbox.position.x - 100
+                            posicion: this.hitbox.position.x - 300
                         })
                     )
                 }, 10)
