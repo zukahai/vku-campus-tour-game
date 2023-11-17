@@ -5,7 +5,7 @@ const audioVictoria = new Audio('./audio/victoria.mp3')
 const audioVictoria2 = new Audio('./audio/victoria2.mp3')
 const audioOver = new Audio('./audio/over.mp3')
 const audioTransporte = new Audio('./audio/transporte.mp3')
-const audioLevel1 = new Audio('./audio/level1.mp3')
+const audioLevel = new Audio('./audio/background.mp3')
 
 audioLevel1.addEventListener('ended', function() {
     this.currentTime = 0;
@@ -23,5 +23,5 @@ function mutear() {
 }
 
 function loadAudioBackground(status) {
-    audioLevel1.muted = status
+    audioLevel.muted = status
 }

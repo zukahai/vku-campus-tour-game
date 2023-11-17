@@ -13,9 +13,6 @@ let levels = {
             }
 
             loadAudioBackground(false)
-            audioLevel1.volume = .2        
-            audioLevel1.currentTime = 0
-            audioLevel1.play()
             
             parsedCollisions = collisionsLevel1.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()

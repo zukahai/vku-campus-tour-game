@@ -31,6 +31,9 @@ window.addEventListener('keydown', (event) => {
                 // làm mới lại trang f5
                 window.location.reload()
             }
+            audioLevel.volume = .04        
+            audioLevel.currentTime = 0
+            audioLevel.play()
             break
 
             case 'c':
@@ -49,6 +52,7 @@ window.addEventListener('keydown', (event) => {
 
                 }
                 break
+            
 
         case 'ArrowLeft':
             keys.ArrowLeft.pressed = true
