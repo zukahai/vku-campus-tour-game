@@ -31,7 +31,7 @@ window.addEventListener('keydown', (event) => {
                 // làm mới lại trang f5
                 window.location.reload()
             }
-            audioLevel.volume = .04        
+            audioLevel.volume = .3        
             audioLevel.currentTime = 0
             audioLevel.play()
             break
