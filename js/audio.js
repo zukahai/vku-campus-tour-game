@@ -7,7 +7,7 @@ const audioOver = new Audio('./audio/over.mp3')
 const audioTransporte = new Audio('./audio/transporte.mp3')
 const audioLevel = new Audio('./audio/phiphai.mp3')
 
-audioLevel1.addEventListener('ended', function() {
+audioLevel.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 });

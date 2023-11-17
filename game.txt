@@ -1,0 +1,7 @@
+- Cập nhật trò chơi (11/2023)
++   Khởi tạo nhân vật ngay bên trái màn hình (Không bị ẩn nhân vật)
++   Sửa hướng dẫn di chuyển
++   Thêm Enter để quay về màn 1 khi dã thắng
++   Sửa hình nhân vật khi chiến thắng ở màn hình chúc mừng
++   Thêm nhạc nền cho trò chơi
++   Đường đạn dài và tốc độ bay của đạn nhanh hơn
