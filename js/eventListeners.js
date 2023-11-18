@@ -55,14 +55,17 @@ window.addEventListener('keydown', (event) => {
             
 
         case 'ArrowLeft':
+        case 'a':
             keys.ArrowLeft.pressed = true
             break
 
         case 'ArrowRight':
+        case 'd':
             keys.ArrowRight.pressed = true
             break
 
-        case 'ArrowUp':           
+        case 'ArrowUp':
+        case 'w':           
         if(player.velocity.y === 0 && lives > 0 && ganar === false && level != 0 && keys.ArrowUp.pressed === false) {
                 keys.ArrowUp.pressed = true
                 player.velocity.y = -12
@@ -82,7 +85,7 @@ window.addEventListener('keydown', (event) => {
             }
             break
 
-        case 'a':
+        case 'm':
             mutear()     
             break
     }
@@ -91,14 +94,17 @@ window.addEventListener('keyup', (event) => {
 
     switch (event.key){
         case 'ArrowLeft':
+        case 'a':
             keys.ArrowLeft.pressed = false
             break
 
-        case 'ArrowRight':            
+        case 'ArrowRight':   
+        case 'd':         
             keys.ArrowRight.pressed = false
             break 
 
-        case 'ArrowUp':            
+        case 'ArrowUp':   
+        case 'w':         
             keys.ArrowUp.pressed = false
             break 
             

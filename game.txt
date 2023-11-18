@@ -1,13 +1,19 @@
-- Cập nhật trò chơi (11/2023)
-+   Sửa lỗi không hiển thị nhân vật
-    Khởi tạo nhân vật ngay bên trái màn hình (Không bị ẩn nhân vật)
-+   Sửa hướng dẫn trò chơi
-    Định nghĩa rõ cách di chuyển, bắn súng
-    Định nghĩa tác dụng của các vật phẩm trong trò chơi
-+   Quay lại gia diện chính khi thắng
-    Thêm Enter để quay về màn 1 khi dã thắng
-    Sửa hình nhân vật khi chiến thắng ở màn hình chúc mừng
-+   Thêm nhạc nền cho trò chơi
-+   Chỉnh sửa game play
-    Đường đạn dài và tốc độ bay của đạn nhanh hơn
-    Lưu lại điểm cao của trò chơi
+Cập nhật trò chơi (11/2023)
+
+-   Sửa lỗi không hiển thị nhân vật
+    + Khởi tạo nhân vật ngay bên trái màn hình (Không bị ẩn nhân vật)
+-   Sửa hướng dẫn trò chơi
+    + Định nghĩa rõ cách di chuyển, bắn súng
+    + Định nghĩa tác dụng của các vật phẩm trong trò chơi
+-   Quay lại gia diện chính khi thắng
+    + Thêm Enter để quay về màn 1 khi dã thắng
+    + Sửa hình nhân vật khi chiến thắng ở màn hình chúc mừng
+-   Thêm nhạc nền cho trò chơi
+-   Chỉnh sửa game play
+    + Đường đạn dài và tốc độ bay của đạn nhanh hơn
+    + Lưu lại điểm cao của trò chơi
+    + Di chuyển nhân vật bằng WASD
+    + Thay đổi cơ chế tính điểm:
+        > 1 quái vật bị tiểu diệt: 100 điểm
+        > Hoàn tất mỗi màn: 5000 điểm
+        > Thời gian còn lại khi hoàn tất trò chơi, 1 giây quy đổi 20 điểm

@@ -479,6 +479,7 @@ class Player extends Sprite {
                         
 
                         proyectiles[j].vida = 0
+                        console.log(proyectiles[j]);
                         this.setScore(100)
 
                         if(lives <= 0) {
@@ -722,7 +723,8 @@ class Player extends Sprite {
                     audioVictoria.currentTime = 0
                     audioVictoria.play()
 
-                    timer = timer + obj[i].identificador2
+                    // timer = timer + obj[i].identificador2
+                    timer += 15
                     obj[i].vida = 0
                 }
                 if(obj[i].identificador === 'corazon') {
@@ -1170,7 +1172,7 @@ function crearMurcielagosLevel5() {
     }, rand);
 }
 function transicionN() {
-    player.setScore(5000)
+    player.setScore(5000 + timer * 20)
     for(let i = 0; i < transicion.length; i++) {
         transicion[i].velocity.x = 14
         level++
