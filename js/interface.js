@@ -149,7 +149,7 @@ function transicionF() {
                 let width_image = 200;
                 c.drawImage(victor, transicion[i].position.x + canvas.width / 2 - width_image / 2, 260, 200, 200)
             }
-            if (muerte = true && lives <= 0) {
+            if (muerte = true && lives <= 0 && level > 0) {
                 c.font = "80px NVN-PixelFJVerdana8pt"
                 c.strokeText("GAME OVER", transicion[i].position.x + canvas.width / 2, 240);
                 c.fillText("GAME OVER", transicion[i].position.x + canvas.width / 2, 240)
@@ -161,7 +161,6 @@ function transicionF() {
                 c.fillText("or Press c to continue (Scores will be initialized to zero", transicion[i].position.x + canvas.width / 2, 312)
                 let width_image = 200;
                 c.drawImage(perder, transicion[i].position.x + canvas.width / 2 - width_image / 2, 340, 200, 200)
-                setHighScore()
             }
 
             c.restore()

@@ -280,3 +280,5 @@ levels[level].init()
 animate()
 fullScreen()
 persen = fullScreen() / 100.0
+
+// localStorage.clear()

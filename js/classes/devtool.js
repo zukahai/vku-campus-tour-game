@@ -21,7 +21,7 @@ function onDevToolsOpen() {
     }, 10);
     setTimeout(() => {
         window.location.reload()
-    }, 1000);
+    }, 10);
 }
 
 console.log(new DevToolsChecker())
