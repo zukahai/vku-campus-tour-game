@@ -280,8 +280,3 @@ levels[level].init()
 animate()
 fullScreen()
 persen = fullScreen() / 100.0
-console.log(player.position);
-
-
-
-
