@@ -479,7 +479,7 @@ class Player extends Sprite {
                         
 
                         proyectiles[j].vida = 0
-                        score = score + 100
+                        this.setScore(100)
 
                         if(lives <= 0) {
                             audioDeath.volume = .5
@@ -765,7 +765,7 @@ class Player extends Sprite {
 
                     player.velocity.x = 0
                     ganar = true
-                    score += 5000
+                    this.setScore(5000)
 
                     if(player.lastDirection === 'left' && player.velocity.x === 0) this.switchSprite('idleLeft')
                     if(player.lastDirection === 'right' && player.velocity.x === 0) this.switchSprite('idleRight')
@@ -859,6 +859,14 @@ class Player extends Sprite {
                 preventTransicion = false
             }
              
+        }
+    }
+
+    setScore(s) {
+        score += s
+        let highScore = localStorage.getItem("highScore")
+        if (highScore == null || highScore < score) {
+            localStorage.setItem("highScore", score)
         }
     }
 }
@@ -1162,7 +1170,7 @@ function crearMurcielagosLevel5() {
     }, rand);
 }
 function transicionN() {
-    score += 5000
+    player.setScore(5000)
     for(let i = 0; i < transicion.length; i++) {
         transicion[i].velocity.x = 14
         level++
