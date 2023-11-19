@@ -5,7 +5,7 @@ const audioVictoria = new Audio('./audio/victoria.mp3')
 const audioVictoria2 = new Audio('./audio/victoria2.mp3')
 const audioOver = new Audio('./audio/over.mp3')
 const audioTransporte = new Audio('./audio/transporte.mp3')
-const audioLevel = new Audio('./audio/phiphai.mp3')
+const audioLevel = new Audio('./audio/tone.mp3')
 
 audioLevel.addEventListener('ended', function() {
     this.currentTime = 0;
