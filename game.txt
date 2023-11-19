@@ -14,6 +14,6 @@ Cập nhật trò chơi (11/2023)
     + Lưu lại điểm cao của trò chơi
     + Di chuyển nhân vật bằng WASD
     + Thay đổi cơ chế tính điểm:
-        > 1 quái vật bị tiểu diệt: 100 điểm
+        > 1 quái vật bị hạ gục: 100 điểm
         > Hoàn tất mỗi màn: 5000 điểm
         > Thời gian còn lại khi hoàn tất trò chơi, 1 giây quy đổi 20 điểm

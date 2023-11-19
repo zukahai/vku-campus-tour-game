@@ -13,9 +13,10 @@ function onDevToolsOpen() {
             "%cTrò chơi không thích hợp khi mở devtools. 🙂",
             "text-shadow: 0 0 10px #fff;color: red; font-size: 30px;  font-weight: bold;"
         )
+        
         console.log(
             "%cHaiZuka",
-            "text-shadow: 0 0 10px #fff;color: red; font-size: 40px; background-color: #000; padding: 10px; border-radius: 10px; font-weight: bold;"
+            "text-shadow: 0 0 10px #fff;color: red; font-size: 50px; background-color: #000; padding: 10px; border-radius: 10px; font-weight: bold;"
         )
         
     }, 10);
