@@ -767,7 +767,7 @@ class Player extends Sprite {
 
                     player.velocity.x = 0
                     ganar = true
-                    this.setScore(5000)
+                    player.setScore(5000 + timer * 20)
 
                     if(player.lastDirection === 'left' && player.velocity.x === 0) this.switchSprite('idleLeft')
                     if(player.lastDirection === 'right' && player.velocity.x === 0) this.switchSprite('idleRight')
