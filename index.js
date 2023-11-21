@@ -77,7 +77,7 @@ let player = new Player({
         x: 20,
         y: 500
     },
-    imageSrc: './img/player/idleR.png',
+    imageSrc: './assets/img/player/idleR.png',
     scale: 1,
     frameRate: 4,
     frameBuffer: 6,
@@ -88,78 +88,78 @@ let player = new Player({
             frameRate: 4,
             frameBuffer: 6,
             loop: true,
-            imageSrc: './img/player/idleR.png',
+            imageSrc: './assets/img/player/idleR.png',
         },
         idleLeft:{
             frameRate: 4,
             frameBuffer: 6,
             loop: true,
-            imageSrc: './img/player/idleL.png',
+            imageSrc: './assets/img/player/idleL.png',
         },
         runRight:{
             frameRate: 5,
             frameBuffer: 6,
             loop: true,
-            imageSrc: './img/player/runR.png',
+            imageSrc: './assets/img/player/runR.png',
         },
         runLeft:{
             frameRate: 5,
             frameBuffer: 6,
             loop: true,
-            imageSrc: './img/player/runL.png',
+            imageSrc: './assets/img/player/runL.png',
         },
         jumpRight:{
             frameRate: 1,
             frameBuffer: 6,
             loop: true,
-            imageSrc: './img/player/jumpR.png',
+            imageSrc: './assets/img/player/jumpR.png',
         },
         jumpLeft:{
             frameRate: 1,
             frameBuffer: 6,
             loop: true,
-            imageSrc: './img/player/jumpL.png',
+            imageSrc: './assets/img/player/jumpL.png',
         },
         ataqueRight:{
             frameRate: 4,
             frameBuffer: 4,
             loop: false,
-            imageSrc: './img/player/attackR2.png',
+            imageSrc: './assets/img/player/attackR2.png',
         },
         ataqueLeft:{
             frameRate: 4,
             frameBuffer: 4,
             loop: false,
-            imageSrc: './img/player/attackL2.png',
+            imageSrc: './assets/img/player/attackL2.png',
         },
         hurtR: {
             frameRate: 1,
             frameBuffer: 10,
             loop: true,
-            imageSrc: './img/player/hurtR.png',
+            imageSrc: './assets/img/player/hurtR.png',
         },
         hurtL: {
             frameRate: 1,
             frameBuffer: 10,
             loop: true,
-            imageSrc: './img/player/hurtL.png',
+            imageSrc: './assets/img/player/hurtL.png',
         },
         muerteR: {
             frameRate: 8,
             frameBuffer: 10,
             loop: false,
-            imageSrc: './img/player/deadR.png',
+            imageSrc: './assets/img/player/deadR.png',
         },
         muerteL: {
             frameRate: 8,
             frameBuffer: 10,
             loop: false,
-            imageSrc: './img/player/deadL.png',
+            imageSrc: './assets/img/player/deadL.png',
         },
     }
 })
 
-let level = 4
+let level = 0
 
 const keys = {
     ArrowUp: { 
