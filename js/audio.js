@@ -1,11 +1,11 @@
-const audioMuerte = new Audio('./audio/muerte.mp3')
-const audioShoot = new Audio('./audio/shoot.mp3')
-const audioCollision = new Audio('./audio/collision.mp3')
-const audioVictoria = new Audio('./audio/victoria.mp3')
-const audioVictoria2 = new Audio('./audio/victoria2.mp3')
-const audioOver = new Audio('./audio/over.mp3')
-const audioTransporte = new Audio('./audio/transporte.mp3')
-const audioLevel = new Audio('./audio/tone.mp3')
+const audioMuerte = new Audio('./assets/audio/muerte.mp3')
+const audioShoot = new Audio('./assets/audio/shoot.mp3')
+const audioCollision = new Audio('./assets/audio/collision.mp3')
+const audioVictoria = new Audio('./assets/audio/victoria.mp3')
+const audioVictoria2 = new Audio('./assets/audio/victoria2.mp3')
+const audioOver = new Audio('./assets/audio/over.mp3')
+const audioTransporte = new Audio('./assets/audio/transporte.mp3')
+const audioLevel = new Audio('./assets/audio/tone.mp3')
 
 audioLevel.addEventListener('ended', function() {
     this.currentTime = 0;

@@ -740,6 +740,27 @@ class Player extends Sprite {
                     console.log("Qua man roi mmm");
 
                     player.velocity.x = 0
+                    
+                    switch (level) {
+                        case 2:
+                            audioLevel.src = "./assets/audio/background.mp3"
+                            audioLevel.volume = .05
+                            audioLevel.currentTime = 0
+                            audioLevel.play()
+                            break
+                        case 3:
+                            audioLevel.src = "./assets/audio/y2mate.com - Two Steps From Hell  Victory.mp3"
+                            audioLevel.volume = .15
+                            audioLevel.currentTime = 0
+                            audioLevel.play()
+                            break
+                        case 4:
+                            audioLevel.src = "./assets/audio/phiphai.mp3"
+                            audioLevel.volume = .15
+                            audioLevel.currentTime = 0
+                            audioLevel.play()
+                            break
+                    }
 
                     setTimeout(() => {
                         audioTransporte.volume = .07
