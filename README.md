@@ -1,4 +1,4 @@
-#  <p align="center">VKU Campus Tour Game <p>
+#  <p align="center">VKU Game <p>
 
 Chào mừng các game thủ đến với thế giới huyền bí của trò chơi độc đáo VKU - một cuộc phiêu lưu kỳ diệu đầy thách thức và hấp dẫn! Trong trò chơi này, bạn sẽ nhập vai một nhân vật anh hùng, sẵn sàng đối đầu với những thế lực tà ác và thách thức khó khăn.
 
@@ -11,5 +11,7 @@ https://github.com/zukahai/vku-campus-tour-game/assets/85035951/6875bed8-65ac-43
 Ngoài ra, để làm cho trải nghiệm của bạn thêm phần phong cách, mỗi khi bạn vượt qua một màn chơi, bạn sẽ nhận được phần quà hấp dẫn. Có thể là vũ khí mới, trang phục độc đáo hoặc những vật phẩm hỗ trợ mà bạn có thể sử dụng trong các thách thức sắp tới.
 
 Với đồ họa tuyệt vời, âm thanh sống động và lối chơi đa dạng, VKU hứa hẹn sẽ mang lại cho bạn những giờ phút giải trí không ngừng và là thách thức không dễ dàng. Hãy tham gia ngay để trở thành anh hùng và chiến thắng thập điểm cao nhất trong thế giới của VKU!
+
+HaiZuka - Phan Đức Hải
 
 
